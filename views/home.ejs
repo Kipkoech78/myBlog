@@ -4,11 +4,10 @@
     <h1>Home</h1>
     <p> <%= homecontent %> </p>
 
- <%   postobjects.forEach(function(postobject){ %>
+ <%   posts.forEach(function(postobject){ %>
     <h1> <%= postobject.titleitem  %> </h1>
-    <p> <%= postobject.content.substring(0,100) + " ..." %> <a href="/param/ <%= postobject.titleitem %>">readmore</a> </p>
+    <p> <%= postobject.content.substring(0,100) + " ..."   %>  <a href="/posts/<%= postobject._id %>">Read More</a> </p>
   <%  }); %>
  
 
-
-<%- include("partials/footer") -%>      
+<%- include("partials/footer") -%> 
